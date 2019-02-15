@@ -6,7 +6,7 @@
 <property name="src.test.dir" location="C:\Users\Pascal\Documents\Java Codes\Software-hw1\tests"/>
 <property name="result.testclasses.dir" location="${result.dir}/testclasses"/>
 
-<path name="libs">
+<path id="libs">
 	<pathelement location ="D:\Junit\junit-4.12"/>
 	<pathelement location = "D:\Junit\hamcrest-core-1.3"/>
 	</path>
