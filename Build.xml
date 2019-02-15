@@ -1,0 +1,64 @@
+<project default = "compile">
+<property name="src.java.dir" location="C:\Users\Pascal\Documents\Java Codes\Software-hw1\src"/>
+<property name="result.dir" location="C:\Users\Pascal\Documents\Java Codes\Software-hw1\target"/>
+<property name="result.javaclasses.dir" location="${result.dir}/classes"/>
+<property name="result.jar.file" location="C:\Users\Pascal\Documents\Java Codes\Software-hw1mypro.jar"/>
+<property name="src.test.dir" location="C:\Users\Pascal\Documents\Java Codes\Software-hw1\tests"/>
+<property name="result.testclasses.dir" location="${result.dir}/testclasses"/>
+
+<path name="libs">
+	<pathelement location ="D:\Junit\junit-4.12"/>
+	<pathelement location = "D:\Junit\hamcrest-core-1.3"/>
+	</path>
+	
+	
+	
+<target name="compile">
+<mkdir dir="${result.javaclasses.dir}"/>
+<javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}" debug="true" includeantruntime="false">
+</javac>
+</target>
+
+<target name="jar" depends="compile">
+   <jar destfile="${result.jar.file}">
+   <fileset dir="${result.javaclasses.dir}">
+   </fileset>
+   </jar>
+   </target>
+	
+	<target name="compile-testcasses" depends ="compile">
+		<mkdir dir="${result.testclasses.dir}"/>
+		<javac srcdir="${src.test.dir}" destdir="${result.testclasses.dir}" debug="true" > 
+			<classpath>
+			<path refid = "libs"/>
+			<pathelement location = "${result.testclasses.dir}"/>
+			</classpath>
+		</javac>
+	</target>
+	
+	<target name="test" depends="compile-testcasses">
+	<junit printsummary="true" haltonfailuare="true" fork="true">
+		<classpath>
+		<path refid = "libs"/>
+		<pathelement location = "${result.javaclasses.dir}"/>
+		<pathelement location = "${result.testclasses.dir}"/>
+	</classpath>
+		<formatter type="brief" usefile ="false"/>
+		<batchtest>
+			<fileset dir="${result.testclasses.dir}">
+			
+			<include name="**/*Test.class"/>
+			</fileset>
+		</batchtest>
+	
+	
+	</junit>
+	
+	
+	
+	
+	</target>
+	
+	
+	
+   </project>
