@@ -6,7 +6,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="D:/Junit/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="D:/Junit/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Pascal/Downloads/junit4.10/junit4.10/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Pascal/Downloads/junit4.10/junit4.10/junit-4.10-src.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Pascal/Downloads/junit4.10/junit4.10/junit-dep-4.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

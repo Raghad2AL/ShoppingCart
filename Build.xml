@@ -7,8 +7,11 @@
 <property name="result.testclasses.dir" location="${result.dir}/testclasses"/>
 
 <path id="libs">
-	<pathelement location ="D:\Junit\junit-4.12"/>
-	<pathelement location = "D:\Junit\hamcrest-core-1.3"/>
+	<pathelement location ="C:\Users\Pascal\Downloads\junit4.10\junit-4.10"/>
+	<pathelement location = "C:\Users\Pascal\Downloads\junit4.10\junit-4.10-src"/>
+	<pathelement location = "C:\Users\Pascal\Downloads\junit4.10\junit-dep-4.10"/>
+
+	
 	</path>
 	
 	
