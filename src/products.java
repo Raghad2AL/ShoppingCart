@@ -1,11 +1,23 @@
 
 public class products {
 
-	int price1;
-	public products(String string, int i) {
-		// TODO Auto-generated constructor stub	
-		price1=i;
+	double price;
+	int number;
+	public products(String string, double d, int i) {
+		// TODO Auto-generated constructor stub
+		price = d;
+		number = i;
 	}//constructor
+
+	public double getPrice1() {
+		return price;
+		
+	}
+	
+	public  int getNo() {
+		return number;
+		
+	}
 	
 
 	

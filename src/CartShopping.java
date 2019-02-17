@@ -2,9 +2,8 @@
 public class CartShopping {
   
 	int TotalCount =0;
-	int TotalPrice =0;
-	boolean flag = false;
-	public int getcount() {
+	double TotalPrice =0;
+public int getcount() {
 		// TODO Auto-generated method stub
 		/*if (flag==false) {
 			TotalCount=0;
@@ -14,14 +13,15 @@ public class CartShopping {
 
 	public void add(products products)  {
 		// TODO Auto-generated method stub
-		int pro = products.price1;
-		TotalCount++;
+		double pro = products.getPrice1();
+		int count = products.getNo();
+		TotalCount = TotalCount + count;
 		TotalPrice = TotalPrice + pro;
 		
 		
 	}
 
-	public int getprice() {
+	public double getprice() {
 		// TODO Auto-generated method stub
 		return TotalPrice;
 	}
